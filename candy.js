@@ -216,3 +216,6 @@ function gameWin(){
     clearInterval(timerInterval);
     document.getElementById("win").style.display="block";
 }
+function refreshGame(){
+    window.location.reload();
+}
