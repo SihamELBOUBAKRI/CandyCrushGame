@@ -20,7 +20,10 @@ window.onload = function() {
         if (time == 0) {
             gameOver();
         }
-    }, 1000);
+        if(score==100){
+            gameWin();
+        }
+    }, 100);
 }
 
 function updateTime() {
@@ -59,18 +62,14 @@ function startGame() {
 function dragStart() {
     currTile = this;
 }
-
 function dragOver(e) {
     e.preventDefault();
 }
-
 function dragEnter(e) {
     e.preventDefault();
 }
-
 function dragLeave() {
 }
-
 function dragDrop() {
     otherTile = this;
 }
@@ -111,7 +110,7 @@ function dragEnd() {
             otherTile.src = currImg;    
         }
         else {
-            // Ifla kant valide move zid mn we9t b 3 seconds
+            // Ila kant valide move zid mn we9t b 3 seconds
             time += 3;
             document.getElementById("timer").innerText = time;
         }
@@ -210,7 +209,10 @@ function generateCandy() {
 }
 
 function gameOver() {
-    clearInterval(timerInterval); 
-    document.getElementById("gameOverMessage").innerText = "“Time\'s up! Game over!” 🕒⏰"; 
-    document.getElementById("caree").style.display = "block"; 
+    clearInterval(timerInterval);  
+    document.getElementById("lose").style.display = "block"; 
+}
+function gameWin(){
+    clearInterval(timerInterval);
+    document.getElementById("win").style.display="block";
 }
