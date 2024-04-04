@@ -211,7 +211,6 @@ function generateCandy() {
 
 function gameOver() {
     clearInterval(timerInterval); 
-    document.getElementById("gameOverMessage").innerText = "Game Over!"; 
-    document.getElementById("gameOverMessage").style.display = "block"; 
-    document.getElementById("refreshButton").style.display = "block";
+    document.getElementById("gameOverMessage").innerText = "“Time\'s up! Game over!” 🕒⏰"; 
+    document.getElementById("caree").style.display = "block"; 
 }
